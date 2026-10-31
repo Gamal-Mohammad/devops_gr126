@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AUREUS | Timeless Opulence & High Craft</title>
+  <title>NEXUS | Bold Tech & Lifestyle Innovations</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -22,31 +22,36 @@
       theme: {
         extend: {
           colors: {
-            obsidian: {
-              950: '#060606',
-              900: '#0B0B0B',
-              850: '#101010',
-              800: '#141414',
-              700: '#1E1E1E',
-              600: '#2A2A2A',
+            midnight: {
+              950: '#040714',
+              900: '#070E22',
+              850: '#0C1738',
+              800: '#112048',
+              700: '#182C62',
+              600: '#233F8A',
             },
-            gold: {
-              light: '#F8F1D6',
-              champagne: '#EEDC9A',
-              DEFAULT: '#D4AF37',
-              deep: '#AA771C',
-              dark: '#785310',
+            crimson: {
+              light: '#FF7B89',
+              DEFAULT: '#FF2E4D',
+              hover: '#E01E3D',
+              deep: '#A30822',
+              dark: '#5C0312',
+            },
+            electric: {
+              glow: '#70B4FF',
+              DEFAULT: '#0066FF',
+              hover: '#0052CC',
+              deep: '#003B99',
             }
           },
           fontFamily: {
-            serif: ['"Playfair Display"', 'serif'],
-            cinzel: ['"Cinzel"', 'serif'],
-            sans: ['"Montserrat"', 'sans-serif'],
+            outfit: ['"Outfit"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           boxShadow: {
-            'gold-sm': '0 2px 10px -2px rgba(212, 175, 55, 0.25)',
-            'gold-md': '0 4px 20px -2px rgba(212, 175, 55, 0.35)',
-            'gold-lg': '0 10px 35px -5px rgba(212, 175, 55, 0.3)',
+            'glow-red': '0 0 25px -4px rgba(255, 46, 77, 0.45)',
+            'glow-blue': '0 0 25px -4px rgba(0, 102, 255, 0.45)',
+            'glow-combo': '0 0 35px -5px rgba(255, 46, 77, 0.3), 0 0 35px -5px rgba(0, 102, 255, 0.35)',
           }
         }
       }
@@ -54,252 +59,277 @@
   </script>
 
   <style>
-    /* Custom Luxury Metallic Gradients & Effects */
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #FFF0BD 0%, #D4AF37 50%, #8C5C0E 100%);
+    /* Blue & Red Hybrid Gradients */
+    .hero-gradient-text {
+      background: linear-gradient(135deg, #70B4FF 0%, #0066FF 40%, #FF2E4D 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    
-    .gold-gradient-bg {
-      background: linear-gradient(135deg, #E6C875 0%, #D4AF37 50%, #996D19 100%);
+
+    .red-gradient-bg {
+      background: linear-gradient(135deg, #FF4D68 0%, #FF2E4D 60%, #C40F2D 100%);
+    }
+    .red-gradient-bg:hover {
+      background: linear-gradient(135deg, #FF667D 0%, #FF3D5A 60%, #DB1535 100%);
     }
 
-    .gold-gradient-bg-hover:hover {
-      background: linear-gradient(135deg, #F5DC92 0%, #E3BE48 50%, #B38122 100%);
+    .blue-gradient-bg {
+      background: linear-gradient(135deg, #2E82FF 0%, #0066FF 60%, #004BC2 100%);
+    }
+    .blue-gradient-bg:hover {
+      background: linear-gradient(135deg, #4792FF 0%, #1A75FF 60%, #0056DE 100%);
     }
 
-    .gold-border-glow {
-      border: 1px solid rgba(212, 175, 55, 0.28);
-      box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.05);
+    .neon-border-red {
+      border: 1px solid rgba(255, 46, 77, 0.35);
+      box-shadow: inset 0 0 15px rgba(255, 46, 77, 0.08);
     }
-    
-    .gold-border-glow:hover {
-      border-color: rgba(212, 175, 55, 0.65);
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15), inset 0 0 20px rgba(212, 175, 55, 0.08);
-    }
-
-    /* Ambient radial glow background */
-    .luxury-radial-glow {
-      background: radial-gradient(circle at 50% 15%, rgba(212, 175, 55, 0.12) 0%, rgba(11, 11, 11, 0) 70%);
+    .neon-border-red:hover {
+      border-color: rgba(255, 46, 77, 0.7);
+      box-shadow: 0 0 20px rgba(255, 46, 77, 0.25), inset 0 0 15px rgba(255, 46, 77, 0.12);
     }
 
-    /* Custom thin scrollbar */
+    .neon-border-blue {
+      border: 1px solid rgba(0, 102, 255, 0.35);
+      box-shadow: inset 0 0 15px rgba(0, 102, 255, 0.08);
+    }
+    .neon-border-blue:hover {
+      border-color: rgba(0, 102, 255, 0.7);
+      box-shadow: 0 0 20px rgba(0, 102, 255, 0.25), inset 0 0 15px rgba(0, 102, 255, 0.12);
+    }
+
+    .hero-glow-backdrop {
+      background: radial-gradient(circle at 20% 30%, rgba(0, 102, 255, 0.18) 0%, transparent 60%),
+                  radial-gradient(circle at 80% 40%, rgba(255, 46, 77, 0.18) 0%, transparent 60%),
+                  #070E22;
+    }
+
     ::-webkit-scrollbar {
       width: 7px;
     }
     ::-webkit-scrollbar-track {
-      background: #0B0B0B;
+      background: #040714;
     }
     ::-webkit-scrollbar-thumb {
-      background: #2A2A2A;
+      background: #182C62;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #D4AF37;
+      background: #FF2E4D;
     }
   </style>
 </head>
 
-<body class="bg-obsidian-900 text-stone-300 font-sans antialiased selection:bg-gold selection:text-obsidian-950 min-h-screen relative flex flex-col justify-between overflow-x-hidden">
+<body class="bg-midnight-950 text-slate-200 font-sans antialiased selection:bg-crimson selection:text-white min-h-screen relative flex flex-col justify-between overflow-x-hidden">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <aside aria-label="Announcement" class="bg-obsidian-950 border-b border-gold/20 py-2 px-4 text-xs tracking-widest uppercase font-medium text-center text-stone-300 flex items-center justify-center gap-3">
-    <span class="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-    <span>Complimentary Worldwide Concierge Delivery & Custom Engraving on orders above $250</span>
-    <span class="hidden md:inline text-gold/40">|</span>
-    <span class="hidden md:inline text-gold font-semibold tracking-wider">Maison Private Drop № 09</span>
+  <!-- TOP PROMO BANNER -->
+  <aside aria-label="Announcement" class="bg-gradient-to-r from-electric-deep via-midnight-950 to-crimson-dark border-b border-electric/25 py-2 px-4 text-xs font-semibold tracking-wider text-center text-slate-100 flex items-center justify-center gap-3">
+    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-crimson text-white text-[10px] uppercase font-bold tracking-widest animate-pulse">
+      <i class="fa-solid fa-bolt"></i> Flash Drop
+    </span>
+    <span>Midnight Season: Extra 20% off with code <span class="text-crimson-light font-bold">REDNBLUE</span></span>
+    <span class="hidden md:inline text-white/30">|</span>
+    <span class="hidden md:inline text-electric-glow">Express Worldwide Drone & Air Freight</span>
   </aside>
 
-  <!-- STICKY LUXURY NAVBAR -->
-  <header class="sticky top-0 z-40 backdrop-blur-xl bg-obsidian-950/85 border-b border-gold/15 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-midnight-950/85 border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Mobile Menu Toggle Button -->
-      <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden text-stone-300 hover:text-gold transition p-2 focus:outline-none">
+      <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden text-slate-200 hover:text-crimson transition p-2 focus:outline-none">
         <i class="fa-solid fa-bars-staggered text-xl"></i>
       </button>
 
       <!-- Brand Logo -->
-      <a href="#" class="flex flex-col items-center group">
-        <span class="font-cinzel text-2xl sm:text-3xl tracking-[0.28em] font-bold gold-gradient-text transition-transform duration-300 group-hover:scale-[1.02]">
-          AUREUS
-        </span>
-        <span class="text-[9px] tracking-[0.45em] uppercase text-gold/60 -mt-1 font-sans">
-          HAUTE HORLOGERIE & OBJETS
-        </span>
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-electric via-midnight-800 to-crimson flex items-center justify-center p-0.5 shadow-glow-combo">
+          <div class="w-full h-full bg-midnight-950 rounded-[10px] flex items-center justify-center">
+            <span class="font-outfit font-black text-xl text-white">N<span class="text-crimson">X</span></span>
+          </div>
+        </div>
+        <div>
+          <span class="font-outfit text-2xl font-black tracking-wider text-white">
+            NEXUS<span class="text-crimson">.</span>
+          </span>
+          <span class="block text-[9px] uppercase tracking-[0.25em] text-electric-glow -mt-1 font-semibold">Audio & Cyber Gear</span>
+        </div>
       </a>
 
+      <!-- Search Bar -->
+      <div class="hidden md:flex flex-1 max-w-md mx-4">
+        <div class="relative w-full">
+          <input 
+            type="text" 
+            placeholder="Search cyber headphones, smart rigs, gear..." 
+            class="w-full bg-midnight-900 border border-slate-700/80 focus:border-electric focus:ring-1 focus:ring-electric rounded-full py-2.5 pl-10 pr-4 text-xs text-white placeholder-slate-400 outline-none transition"
+          >
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+        </div>
+      </div>
+
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center space-x-9 text-xs uppercase tracking-[0.2em] font-medium text-stone-300">
-        <a href="#collections" class="hover:text-gold transition-colors duration-200 py-1 border-b border-transparent hover:border-gold/60">Collections</a>
-        <a href="#products" class="hover:text-gold transition-colors duration-200 py-1 border-b border-transparent hover:border-gold/60">Timepieces</a>
-        <a href="#spotlight" class="hover:text-gold transition-colors duration-200 py-1 border-b border-transparent hover:border-gold/60">Flagship</a>
-        <a href="#heritage" class="hover:text-gold transition-colors duration-200 py-1 border-b border-transparent hover:border-gold/60">Heritage</a>
-        <a href="#vip" class="hover:text-gold transition-colors duration-200 py-1 border-b border-transparent hover:border-gold/60">VIP Salon</a>
+      <nav class="hidden lg:flex items-center space-x-7 text-xs uppercase tracking-widest font-semibold text-slate-200">
+        <a href="#featured" class="hover:text-electric-glow transition-colors py-1">Featured</a>
+        <a href="#deals" class="hover:text-crimson transition-colors py-1 flex items-center gap-1.5">
+          <span>Deals</span>
+          <span class="w-2 h-2 rounded-full bg-crimson animate-ping"></span>
+        </a>
+        <a href="#categories" class="hover:text-electric-glow transition-colors py-1">Categories</a>
+        <a href="#newsletter" class="hover:text-electric-glow transition-colors py-1">VIP Access</a>
       </nav>
 
       <!-- Action Utilities -->
-      <div class="flex items-center space-x-5">
-        <!-- Search -->
-        <button id="searchBtn" aria-label="Search Collection" class="text-stone-300 hover:text-gold transition p-2">
-          <i class="fa-solid fa-magnifying-glass text-sm"></i>
-        </button>
+      <div class="flex items-center space-x-4">
+        <!-- Currency Selector -->
+        <select class="hidden sm:block bg-midnight-900 text-xs text-slate-300 font-semibold border border-slate-800 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-electric">
+          <option>USD ($)</option>
+          <option>EUR (€)</option>
+          <option>GBP (£)</option>
+        </select>
 
         <!-- Wishlist -->
-        <button id="wishlistBtn" aria-label="View Wishlist" class="relative text-stone-300 hover:text-gold transition p-2">
-          <i class="fa-regular fa-heart text-base"></i>
-          <span id="wishlistCount" class="absolute top-1 right-1 bg-gold text-obsidian-950 font-bold text-[9px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+        <button id="wishlistBtn" aria-label="View Wishlist" class="relative text-slate-200 hover:text-crimson transition p-2">
+          <i class="fa-regular fa-heart text-lg"></i>
+          <span id="wishlistCount" class="absolute top-1 right-1 bg-crimson text-white font-bold text-[9px] w-4 h-4 rounded-full flex items-center justify-center">3</span>
         </button>
 
         <!-- Cart Drawer Trigger -->
-        <button id="cartBtn" aria-label="Open Shopping Bag" class="relative flex items-center gap-2 border border-gold/40 hover:border-gold px-3.5 py-1.5 rounded-full transition-all duration-300 group">
-          <i class="fa-solid fa-bag-shopping text-gold text-sm group-hover:scale-110 transition-transform"></i>
-          <span class="text-xs uppercase tracking-wider text-stone-200 font-medium">Bag</span>
-          <span id="cartCount" class="bg-gold text-obsidian-950 font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center ml-0.5">1</span>
+        <button id="cartBtn" aria-label="Open Shopping Bag" class="relative flex items-center gap-2.5 bg-gradient-to-r from-electric to-midnight-800 hover:from-electric-hover hover:to-midnight-700 border border-electric/40 px-4 py-2 rounded-full transition-all duration-300 shadow-glow-blue group">
+          <i class="fa-solid fa-cart-shopping text-white text-sm group-hover:scale-110 transition-transform"></i>
+          <span class="text-xs uppercase tracking-wider text-white font-bold hidden sm:inline">Cart</span>
+          <span id="cartCount" class="bg-crimson text-white font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center">1</span>
         </button>
       </div>
 
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-obsidian-950/98 border-b border-gold/20 px-6 py-8 space-y-5 text-sm uppercase tracking-widest text-center transition-all">
-      <a href="#collections" class="block py-2 text-stone-300 hover:text-gold transition">Collections</a>
-      <a href="#products" class="block py-2 text-stone-300 hover:text-gold transition">Timepieces</a>
-      <a href="#spotlight" class="block py-2 text-stone-300 hover:text-gold transition">Flagship Edition</a>
-      <a href="#heritage" class="block py-2 text-stone-300 hover:text-gold transition">Our Heritage</a>
-      <a href="#vip" class="block py-2 text-gold font-semibold">VIP Salon Access</a>
+    <div id="mobileMenu" class="hidden lg:hidden bg-midnight-950/98 border-b border-slate-800 px-6 py-6 space-y-4 text-xs uppercase tracking-widest text-center">
+      <div class="pb-3">
+        <input 
+          type="text" 
+          placeholder="Search gear..." 
+          class="w-full bg-midnight-900 border border-slate-700 rounded-full py-2.5 px-4 text-xs text-white"
+        >
+      </div>
+      <a href="#featured" class="block py-2 text-slate-300 hover:text-electric-glow">Featured</a>
+      <a href="#deals" class="block py-2 text-crimson font-bold">Flash Deals</a>
+      <a href="#categories" class="block py-2 text-slate-300 hover:text-electric-glow">Categories</a>
+      <a href="#newsletter" class="block py-2 text-slate-300 hover:text-crimson">Join VIP Club</a>
     </div>
   </header>
 
   <main>
     <!-- HERO SECTION -->
-    <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden luxury-radial-glow">
+    <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden hero-glow-backdrop">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           <!-- Hero Copy -->
           <div class="lg:col-span-7 space-y-7 text-center lg:text-left z-10">
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-obsidian-800/80 border border-gold/30 text-gold text-xs tracking-[0.25em] uppercase font-semibold">
-              <i class="fa-solid fa-gem text-xs"></i>
-              <span>Haute Horlogerie & Precious Metals</span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-midnight-850/90 border border-crimson/50 text-white text-xs tracking-wider uppercase font-semibold shadow-glow-red">
+              <span class="w-2 h-2 rounded-full bg-crimson"></span>
+              <span>Next-Gen Audio Synthesis № 01</span>
             </div>
 
-            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.12] text-stone-100 tracking-tight">
-              Mastery in Every <br class="hidden sm:inline" />
-              <span class="gold-gradient-text italic font-serif">Timeless Moment</span>
+            <h1 class="font-outfit text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.08] text-white tracking-tight">
+              Sound Engineered in <br />
+              <span class="hero-gradient-text">Pure Crimson & Blue</span>
             </h1>
 
-            <p class="text-stone-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-              Engineered with 18-karat sovereign gold, sapphire crystals, and bespoke mechanical complications. Discover rare pieces forged for those who shape legacies.
+            <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+              Experience the pinnacle of spatial acoustics and cyber-luminescent design. Ultra-low 12ms latency, active carbon drivers, and aerospace cobalt alloy frames.
             </p>
 
             <!-- CTA Buttons -->
             <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a href="#products" class="w-full sm:w-auto text-center px-8 py-4 rounded-full gold-gradient-bg gold-gradient-bg-hover text-obsidian-950 font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-gold-md hover:shadow-gold-lg">
-                Explore Collection
+              <a href="#featured" class="w-full sm:w-auto text-center px-8 py-4 rounded-xl red-gradient-bg text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-glow-red flex items-center justify-center gap-2">
+                <span>Shop Collection</span>
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
-              <a href="#spotlight" class="w-full sm:w-auto text-center px-8 py-4 rounded-full border border-gold/40 hover:border-gold text-stone-200 hover:text-gold font-medium text-xs uppercase tracking-[0.2em] transition-all duration-300 bg-obsidian-950/40 hover:bg-gold/5">
-                View Lookbook № 09
+              <a href="#deals" class="w-full sm:w-auto text-center px-8 py-4 rounded-xl border border-electric/60 hover:border-electric text-white font-semibold text-xs uppercase tracking-widest transition-all duration-300 bg-midnight-900/60 hover:bg-electric/10 shadow-glow-blue">
+                Explore Deals (-40%)
               </a>
             </div>
 
-            <!-- Trust Metrics -->
-            <div class="pt-8 border-t border-gold/15 grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+            <!-- Stats -->
+            <div class="pt-8 border-t border-slate-800 grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
               <div>
-                <div class="font-cinzel text-xl sm:text-2xl font-bold text-gold">300 Yrs</div>
-                <div class="text-[10px] uppercase tracking-wider text-stone-400 mt-0.5">Artisanal Heritage</div>
+                <div class="font-outfit text-2xl font-bold text-electric-glow">60 Hrs</div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400 mt-0.5">Battery Autonomy</div>
               </div>
               <div>
-                <div class="font-cinzel text-xl sm:text-2xl font-bold text-gold">100%</div>
-                <div class="text-[10px] uppercase tracking-wider text-stone-400 mt-0.5">Conflict-Free Gold</div>
+                <div class="font-outfit text-2xl font-bold text-crimson">0.01%</div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400 mt-0.5">Harmonic Distortion</div>
               </div>
               <div>
-                <div class="font-cinzel text-xl sm:text-2xl font-bold text-gold">№ 1/50</div>
-                <div class="text-[10px] uppercase tracking-wider text-stone-400 mt-0.5">Strict Editions</div>
+                <div class="font-outfit text-2xl font-bold text-white">4.9 / 5</div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400 mt-0.5">Over 18k Reviews</div>
               </div>
             </div>
           </div>
 
           <!-- Hero Visual Showcase Card -->
           <div class="lg:col-span-5 relative flex justify-center">
-            <!-- Glow background decorative aura -->
-            <div class="absolute -inset-4 bg-gradient-to-tr from-gold/20 via-gold/5 to-transparent rounded-3xl blur-2xl"></div>
+            <!-- Glow background decorative auras -->
+            <div class="absolute -top-10 -left-10 w-72 h-72 bg-electric/25 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-crimson/25 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="relative w-full max-w-md rounded-2xl p-6 bg-gradient-to-b from-obsidian-800 to-obsidian-950 gold-border-glow transition-all duration-500">
+            <div class="relative w-full max-w-md rounded-3xl p-6 bg-gradient-to-b from-midnight-850 to-midnight-950 border border-slate-700/80 shadow-2xl transition-all duration-500 hover:border-electric">
               
-              <div class="flex items-center justify-between text-xs tracking-widest text-gold uppercase mb-4">
-                <span>Ref. AU-9082X</span>
-                <span class="flex items-center gap-1.5 text-stone-400 font-sans"><i class="fa-solid fa-shield-halved text-gold"></i> Authenticated</span>
+              <div class="flex items-center justify-between text-xs tracking-wider uppercase mb-4">
+                <span class="text-electric-glow font-bold flex items-center gap-1.5">
+                  <i class="fa-solid fa-satellite-dish"></i> Ref: NX-900 RED
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full bg-crimson/20 border border-crimson/40 text-crimson font-bold text-[10px]">
+                  Sale Ends Today
+                </span>
               </div>
 
-              <!-- Product Graphic with SVG Illustration -->
-              <div class="w-full h-80 rounded-xl bg-obsidian-950 border border-gold/15 flex items-center justify-center p-6 relative overflow-hidden group">
-                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/15 via-transparent to-transparent"></div>
-                
-                <!-- Stylized Luxury Watch Graphic in SVG -->
-                <svg class="w-64 h-64 text-gold drop-shadow-[0_15px_25px_rgba(212,175,55,0.3)] transition-transform duration-700 group-hover:scale-105" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Strap Top -->
-                  <rect x="74" y="2" width="52" height="42" rx="4" fill="url(#leatherGrad)" stroke="#AA771C" stroke-width="2"/>
-                  <line x1="82" y1="6" x2="82" y2="40" stroke="#785310" stroke-dasharray="3 3"/>
-                  <line x1="118" y1="6" x2="118" y2="40" stroke="#785310" stroke-dasharray="3 3"/>
+              <!-- Product Graphic: Cyber Red/Blue Headphone Vector -->
+              <div class="w-full h-80 rounded-2xl bg-midnight-950 border border-slate-800 flex items-center justify-center p-6 relative overflow-hidden group">
+                <div class="absolute inset-0 bg-radial from-electric/10 via-transparent to-transparent"></div>
 
-                  <!-- Strap Bottom -->
-                  <rect x="74" y="156" width="52" height="42" rx="4" fill="url(#leatherGrad)" stroke="#AA771C" stroke-width="2"/>
-                  <line x1="82" y1="160" x2="82" y2="194" stroke="#785310" stroke-dasharray="3 3"/>
-                  <line x1="118" y1="160" x2="118" y2="194" stroke="#785310" stroke-dasharray="3 3"/>
+                <svg class="w-64 h-64 drop-shadow-[0_15px_30px_rgba(255,46,77,0.35)] transition-transform duration-700 group-hover:scale-105" viewBox="0 0 200 200" fill="none">
+                  <!-- Headband Arch -->
+                  <path d="M40 100 C40 45, 160 45, 160 100" stroke="#0066FF" stroke-width="8" stroke-linecap="round"/>
+                  <path d="M52 90 C52 55, 148 55, 148 90" stroke="#FF2E4D" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 4"/>
+                  
+                  <!-- Left Earcup Mount -->
+                  <rect x="30" y="90" width="16" height="30" rx="4" fill="#0C1738" stroke="#0066FF" stroke-width="2"/>
+                  <!-- Left Cushion -->
+                  <rect x="22" y="96" width="18" height="58" rx="9" fill="#182C62" stroke="#FF2E4D" stroke-width="2.5"/>
+                  <circle cx="31" cy="125" r="5" fill="#FF2E4D"/>
 
-                  <!-- Bezel & Case -->
-                  <circle cx="100" cy="100" r="66" fill="url(#goldRim)" stroke="#F5DC92" stroke-width="3"/>
-                  <circle cx="100" cy="100" r="58" fill="#0B0B0B" stroke="#AA771C" stroke-width="1.5"/>
+                  <!-- Right Earcup Mount -->
+                  <rect x="154" y="90" width="16" height="30" rx="4" fill="#0C1738" stroke="#0066FF" stroke-width="2"/>
+                  <!-- Right Cushion -->
+                  <rect x="160" y="96" width="18" height="58" rx="9" fill="#182C62" stroke="#FF2E4D" stroke-width="2.5"/>
+                  <circle cx="169" cy="125" r="5" fill="#FF2E4D"/>
 
-                  <!-- Watch Dial Inner Details -->
-                  <circle cx="100" cy="100" r="54" stroke="#333" stroke-width="1" stroke-dasharray="2 4"/>
-                  <!-- Hour Marks -->
-                  <rect x="98.5" y="48" width="3" height="8" rx="1.5" fill="#EEDC9A"/>
-                  <rect x="98.5" y="144" width="3" height="8" rx="1.5" fill="#EEDC9A"/>
-                  <rect x="48" y="98.5" width="8" height="3" rx="1.5" fill="#EEDC9A"/>
-                  <rect x="144" y="98.5" width="8" height="3" rx="1.5" fill="#EEDC9A"/>
-
-                  <!-- Subdials -->
-                  <circle cx="100" cy="80" r="10" stroke="#AA771C" stroke-width="1" fill="#141414"/>
-                  <circle cx="82" cy="112" r="9" stroke="#AA771C" stroke-width="1" fill="#141414"/>
-                  <circle cx="118" cy="112" r="9" stroke="#AA771C" stroke-width="1" fill="#141414"/>
-
-                  <!-- Watch Hands -->
-                  <line x1="100" y1="100" x2="124" y2="82" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/>
-                  <line x1="100" y1="100" x2="86" y2="72" stroke="#EEDC9A" stroke-width="3" stroke-linecap="round"/>
-                  <line x1="100" y1="100" x2="100" y2="128" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
-                  <circle cx="100" cy="100" r="4" fill="#D4AF37"/>
-
-                  <!-- Gradient Definitions -->
-                  <defs>
-                    <linearGradient id="goldRim" x1="40" y1="40" x2="160" y2="160" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#FFF0BD"/>
-                      <stop offset="0.5" stop-color="#D4AF37"/>
-                      <stop offset="1" stop-color="#785310"/>
-                    </linearGradient>
-                    <linearGradient id="leatherGrad" x1="74" y1="2" x2="126" y2="44" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#1A1A1A"/>
-                      <stop offset="1" stop-color="#0E0E0E"/>
-                    </linearGradient>
-                  </defs>
+                  <!-- Acoustic Wave Neon Rings -->
+                  <circle cx="100" cy="100" r="14" stroke="#70B4FF" stroke-width="1.5" stroke-dasharray="2 3"/>
+                  <circle cx="100" cy="100" r="26" stroke="#FF2E4D" stroke-width="1" stroke-dasharray="4 6"/>
                 </svg>
 
-                <div class="absolute top-3 left-3 bg-obsidian-900/90 border border-gold/40 text-gold text-[10px] tracking-widest uppercase font-bold px-2.5 py-1 rounded">
-                  Exclusive Piece
+                <div class="absolute bottom-3 left-3 bg-midnight-900/90 border border-electric/40 text-electric-glow text-[10px] font-bold px-2.5 py-1 rounded-md">
+                  Active Spatial ANC
                 </div>
               </div>
 
-              <!-- Product Specs & Quick Action -->
+              <!-- Product Info & CTA -->
               <div class="mt-5 space-y-3">
                 <div class="flex items-center justify-between">
-                  <h3 class="font-serif text-lg text-stone-100 font-semibold">Chrono Royal 41mm</h3>
-                  <span class="font-cinzel text-gold font-bold text-lg">$24,800</span>
+                  <h3 class="font-outfit text-xl text-white font-bold">Nexus Nova-Pro ANC</h3>
+                  <div class="text-right">
+                    <span class="text-slate-400 text-xs line-through block">$349</span>
+                    <span class="font-outfit text-crimson font-black text-xl">$249</span>
+                  </div>
                 </div>
-                <p class="text-xs text-stone-400 font-light">18k Solid Yellow Gold Case, Black Alligator Strap, 72-Hour Reserve.</p>
-                <button onclick="addToCart('Chrono Royal 41mm', 24800, 'Watch')" class="w-full mt-3 py-3 rounded-lg border border-gold/50 bg-gold/10 hover:bg-gold hover:text-obsidian-950 text-gold text-xs font-semibold uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2">
-                  <i class="fa-solid fa-plus text-xs"></i> Acquire Timepiece
+                <p class="text-xs text-slate-400">Titanium diaphragms with dual Bluetooth 5.4 + lossless 2.4GHz wireless dongle.</p>
+                <button onclick="addToCart('Nexus Nova-Pro ANC', 249, 'Audio')" class="w-full mt-3 py-3.5 rounded-xl red-gradient-bg text-white text-xs font-bold uppercase tracking-wider transition-all shadow-glow-red flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-cart-plus text-xs"></i> Add To Bag &bull; Fast Ship
                 </button>
               </div>
 
@@ -310,48 +340,48 @@
       </div>
     </section>
 
-    <!-- 4-COLUMN VALUE PROPOSITIONS -->
-    <section class="border-y border-gold/15 bg-obsidian-950/70 py-12">
+    <!-- TRUST BADGES BAR -->
+    <section class="border-y border-slate-800 bg-midnight-900/90 py-10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-obsidian-850/40 border border-gold/10">
-            <div class="w-12 h-12 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-compass-drafting text-gold text-xl"></i>
+          <div class="flex items-center gap-4 p-4 rounded-2xl bg-midnight-950/70 border border-electric/20 hover:border-electric/50 transition">
+            <div class="w-12 h-12 rounded-xl bg-electric/15 border border-electric/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-truck-fast text-electric-glow text-xl"></i>
             </div>
             <div>
-              <h4 class="font-serif text-stone-200 text-sm font-semibold tracking-wide">Handcrafted Precision</h4>
-              <p class="text-stone-400 text-xs mt-1 leading-relaxed">Individually calibrated and assembled by master horologists in Geneva.</p>
+              <h4 class="font-outfit text-white text-sm font-bold">Free Global Express</h4>
+              <p class="text-slate-400 text-xs mt-0.5">Complimentary 2-day delivery on all orders over $99.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-obsidian-850/40 border border-gold/10">
-            <div class="w-12 h-12 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-certificate text-gold text-xl"></i>
+          <div class="flex items-center gap-4 p-4 rounded-2xl bg-midnight-950/70 border border-crimson/20 hover:border-crimson/50 transition">
+            <div class="w-12 h-12 rounded-xl bg-crimson/15 border border-crimson/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-rotate-left text-crimson text-xl"></i>
             </div>
             <div>
-              <h4 class="font-serif text-stone-200 text-sm font-semibold tracking-wide">Certified Provenance</h4>
-              <p class="text-stone-400 text-xs mt-1 leading-relaxed">Each creation is delivered with a registered physical & cryptographic deed.</p>
+              <h4 class="font-outfit text-white text-sm font-bold">30-Day Money Back</h4>
+              <p class="text-slate-400 text-xs mt-0.5">Zero restocking fees. Hassle-free instant exchanges.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-obsidian-850/40 border border-gold/10">
-            <div class="w-12 h-12 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-box-open text-gold text-xl"></i>
+          <div class="flex items-center gap-4 p-4 rounded-2xl bg-midnight-950/70 border border-electric/20 hover:border-electric/50 transition">
+            <div class="w-12 h-12 rounded-xl bg-electric/15 border border-electric/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-headset text-electric-glow text-xl"></i>
             </div>
             <div>
-              <h4 class="font-serif text-stone-200 text-sm font-semibold tracking-wide">Bespoke Packaging</h4>
-              <p class="text-stone-400 text-xs mt-1 leading-relaxed">Hand-lacquered piano wood coffret lined with deep charcoal velvet.</p>
+              <h4 class="font-outfit text-white text-sm font-bold">24/7 Tech Experts</h4>
+              <p class="text-slate-400 text-xs mt-0.5">Live audio technicians ready to assist in 2 minutes.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4 p-4 rounded-xl bg-obsidian-850/40 border border-gold/10">
-            <div class="w-12 h-12 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-plane-lock text-gold text-xl"></i>
+          <div class="flex items-center gap-4 p-4 rounded-2xl bg-midnight-950/70 border border-crimson/20 hover:border-crimson/50 transition">
+            <div class="w-12 h-12 rounded-xl bg-crimson/15 border border-crimson/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-shield-halved text-crimson text-xl"></i>
             </div>
             <div>
-              <h4 class="font-serif text-stone-200 text-sm font-semibold tracking-wide">Concierge Transport</h4>
-              <p class="text-stone-400 text-xs mt-1 leading-relaxed">Armored priority logistics and discreet door-to-door hand delivery worldwide.</p>
+              <h4 class="font-outfit text-white text-sm font-bold">Encrypted Checkout</h4>
+              <p class="text-slate-400 text-xs mt-0.5">Verified SSL 256-bit PCI level-1 payment security.</p>
             </div>
           </div>
 
@@ -359,235 +389,209 @@
       </div>
     </section>
 
-    <!-- CURATED COLLECTIONS GRID -->
-    <section id="products" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
-        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold">The Sovereign Archive</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Curated Masterworks</h2>
-        <p class="text-stone-400 text-sm font-light">Limited inventory allocations released directly from the private workshop ateliers.</p>
-      </div>
-
-      <!-- Filters & Sorting -->
-      <div class="flex flex-wrap items-center justify-between gap-4 mb-10 pb-4 border-b border-gold/15 text-xs">
-        <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0">
-          <button class="px-4 py-2 rounded-full bg-gold text-obsidian-950 font-semibold tracking-wider uppercase">All Works</button>
-          <button class="px-4 py-2 rounded-full border border-gold/20 text-stone-300 hover:text-gold hover:border-gold/40 tracking-wider uppercase transition">Horology</button>
-          <button class="px-4 py-2 rounded-full border border-gold/20 text-stone-300 hover:text-gold hover:border-gold/40 tracking-wider uppercase transition">Parfums</button>
-          <button class="px-4 py-2 rounded-full border border-gold/20 text-stone-300 hover:text-gold hover:border-gold/40 tracking-wider uppercase transition">Signet Rings</button>
+    <!-- FEATURED PRODUCTS GRID -->
+    <section id="featured" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <div class="flex items-center gap-2 text-crimson text-xs uppercase font-bold tracking-widest mb-2">
+            <i class="fa-solid fa-fire"></i> Flagship Catalog
+          </div>
+          <h2 class="font-outfit text-3xl sm:text-4xl text-white font-black tracking-tight">
+            High-Performance Cyber Hardware
+          </h2>
         </div>
-        <div class="flex items-center gap-2 text-stone-400">
-          <span>Sort by:</span>
-          <select class="bg-obsidian-850 border border-gold/20 text-gold text-xs rounded px-2.5 py-1.5 focus:outline-none">
-            <option>Curated Prestige</option>
-            <option>Value: High to Low</option>
-            <option>New Releases</option>
-          </select>
+        
+        <!-- Category Filters -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
+          <button class="px-5 py-2.5 rounded-full bg-electric text-white font-bold text-xs uppercase tracking-wider shadow-glow-blue">All Gear</button>
+          <button class="px-5 py-2.5 rounded-full bg-midnight-900 border border-slate-700 hover:border-crimson text-slate-300 hover:text-crimson font-semibold text-xs uppercase tracking-wider transition">Audio</button>
+          <button class="px-5 py-2.5 rounded-full bg-midnight-900 border border-slate-700 hover:border-crimson text-slate-300 hover:text-crimson font-semibold text-xs uppercase tracking-wider transition">Smart Keyboards</button>
+          <button class="px-5 py-2.5 rounded-full bg-midnight-900 border border-slate-700 hover:border-crimson text-slate-300 hover:text-crimson font-semibold text-xs uppercase tracking-wider transition">Peripherals</button>
         </div>
       </div>
 
-      <!-- Products Grid -->
+      <!-- Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <!-- Product 1 -->
-        <article class="group rounded-2xl bg-obsidian-850/60 border border-gold/20 p-5 flex flex-col justify-between gold-border-glow transition-all duration-300">
+        <!-- Card 1 -->
+        <article class="group rounded-3xl bg-midnight-900/70 border border-slate-800 p-5 flex flex-col justify-between neon-border-blue transition-all duration-300">
           <div>
-            <div class="relative w-full h-64 rounded-xl bg-obsidian-950 border border-gold/10 flex items-center justify-center p-4 overflow-hidden mb-5">
-              <span class="absolute top-3 left-3 bg-gold text-obsidian-950 text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded">
-                Numbered 1/50
+            <div class="relative w-full h-64 rounded-2xl bg-midnight-950 border border-slate-800 flex items-center justify-center p-4 overflow-hidden mb-5">
+              <span class="absolute top-3 left-3 bg-crimson text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md shadow-glow-red">
+                -35% OFF
               </span>
-              <button onclick="toggleWishlist(this)" aria-label="Add to wishlist" class="absolute top-3 right-3 text-stone-400 hover:text-gold transition">
-                <i class="fa-regular fa-heart text-base"></i>
+              <button onclick="toggleWishlist(this)" aria-label="Add to wishlist" class="absolute top-3 right-3 text-slate-400 hover:text-crimson transition">
+                <i class="fa-regular fa-heart text-lg"></i>
               </button>
               
-              <!-- SVG Illustration: Skeleton Chrono -->
-              <svg class="w-40 h-40 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
-                <circle cx="50" cy="50" r="42" stroke="#D4AF37" stroke-width="2.5" fill="#121212"/>
-                <circle cx="50" cy="50" r="34" stroke="#785310" stroke-width="1.5" stroke-dasharray="3 3"/>
-                <circle cx="50" cy="50" r="14" stroke="#EEDC9A" stroke-width="1.5"/>
-                <path d="M50 20 L50 50 L68 50" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
-                <rect x="42" y="4" width="16" height="8" rx="2" fill="#AA771C"/>
-                <rect x="42" y="88" width="16" height="8" rx="2" fill="#AA771C"/>
+              <!-- SVG: Smart Earbuds Case -->
+              <svg class="w-36 h-36 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
+                <rect x="25" y="25" width="50" height="50" rx="15" fill="#0C1738" stroke="#0066FF" stroke-width="2.5"/>
+                <line x1="25" y1="45" x2="75" y2="45" stroke="#FF2E4D" stroke-width="2"/>
+                <circle cx="50" cy="58" r="4" fill="#70B4FF"/>
+                <circle cx="40" cy="35" r="4" fill="#FF2E4D"/>
+                <circle cx="60" cy="35" r="4" fill="#0066FF"/>
               </svg>
             </div>
 
-            <div class="flex items-center gap-1 text-gold text-xs mb-1">
+            <div class="flex items-center gap-1 text-crimson text-xs mb-1">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
-              <span class="text-stone-400 text-[11px] ml-1.5">(48)</span>
+              <span class="text-slate-400 text-[11px] ml-1.5">(214)</span>
             </div>
 
-            <h3 class="font-serif text-stone-100 font-semibold text-lg group-hover:text-gold transition-colors">Aureus Tourbillon 42</h3>
-            <p class="text-stone-400 text-xs mt-1 line-clamp-2">Exposed cage tourbillon crafted in rose gold alloy and obsidian dial plates.</p>
+            <h3 class="font-outfit text-white font-bold text-lg group-hover:text-electric-glow transition-colors">Vortex Pods X-Treme</h3>
+            <p class="text-slate-400 text-xs mt-1">Dual-driver in-ear monitors with carbon fiber acoustic filters.</p>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-gold/15 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
             <div>
-              <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Acquisition</span>
-              <span class="font-cinzel text-gold font-bold text-lg">$38,500</span>
+              <span class="text-slate-500 text-xs line-through">$189</span>
+              <span class="font-outfit text-white font-black text-xl block">$129</span>
             </div>
-            <button onclick="addToCart('Aureus Tourbillon 42', 38500, 'Watch')" class="w-10 h-10 rounded-full bg-gold/10 border border-gold/40 hover:bg-gold hover:text-obsidian-950 text-gold flex items-center justify-center transition-all duration-300">
-              <i class="fa-solid fa-bag-shopping text-sm"></i>
+            <button onclick="addToCart('Vortex Pods X-Treme', 129, 'Audio')" class="w-11 h-11 rounded-xl bg-electric/20 hover:bg-electric text-electric-glow hover:text-white border border-electric/40 flex items-center justify-center transition-all duration-300">
+              <i class="fa-solid fa-plus text-sm"></i>
             </button>
           </div>
         </article>
 
-        <!-- Product 2 -->
-        <article class="group rounded-2xl bg-obsidian-850/60 border border-gold/20 p-5 flex flex-col justify-between gold-border-glow transition-all duration-300">
+        <!-- Card 2 -->
+        <article class="group rounded-3xl bg-midnight-900/70 border border-slate-800 p-5 flex flex-col justify-between neon-border-red transition-all duration-300">
           <div>
-            <div class="relative w-full h-64 rounded-xl bg-obsidian-950 border border-gold/10 flex items-center justify-center p-4 overflow-hidden mb-5">
-              <span class="absolute top-3 left-3 bg-obsidian-800 text-gold border border-gold/40 text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded">
-                Rare Extrait
+            <div class="relative w-full h-64 rounded-2xl bg-midnight-950 border border-slate-800 flex items-center justify-center p-4 overflow-hidden mb-5">
+              <span class="absolute top-3 left-3 bg-electric text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md shadow-glow-blue">
+                HOT DROP
               </span>
-              <button onclick="toggleWishlist(this)" aria-label="Add to wishlist" class="absolute top-3 right-3 text-stone-400 hover:text-gold transition">
-                <i class="fa-regular fa-heart text-base"></i>
+              <button onclick="toggleWishlist(this)" aria-label="Add to wishlist" class="absolute top-3 right-3 text-slate-400 hover:text-crimson transition">
+                <i class="fa-regular fa-heart text-lg"></i>
               </button>
               
-              <!-- SVG Illustration: Luxury Perfume Flacon -->
-              <svg class="w-36 h-36 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
-                <!-- Cap -->
-                <rect x="42" y="10" width="16" height="14" rx="2" fill="url(#goldGrad)" stroke="#AA771C"/>
-                <!-- Neck -->
-                <rect x="45" y="24" width="10" height="6" fill="#555"/>
-                <!-- Bottle -->
-                <rect x="30" y="30" width="40" height="58" rx="6" fill="#141414" stroke="#D4AF37" stroke-width="2"/>
-                <rect x="35" y="44" width="30" height="30" rx="3" stroke="#AA771C" stroke-dasharray="2 2"/>
-                <text x="50" y="58" font-size="6" fill="#F3E5AB" text-anchor="middle" font-family="Cinzel">OUD</text>
-                <text x="50" y="66" font-size="4" fill="#D4AF37" text-anchor="middle" font-family="Montserrat">ROYAL</text>
-                <defs>
-                  <linearGradient id="goldGrad" x1="42" y1="10" x2="58" y2="24">
-                    <stop stop-color="#F5DC92"/>
-                    <stop offset="1" stop-color="#AA771C"/>
-                  </linearGradient>
-                </defs>
+              <!-- SVG: Mechanical Keypad -->
+              <svg class="w-40 h-40 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
+                <rect x="18" y="28" width="64" height="46" rx="6" fill="#0C1738" stroke="#FF2E4D" stroke-width="2"/>
+                <rect x="24" y="36" width="10" height="10" rx="2" fill="#0066FF"/>
+                <rect x="38" y="36" width="10" height="10" rx="2" fill="#182C62"/>
+                <rect x="52" y="36" width="10" height="10" rx="2" fill="#182C62"/>
+                <rect x="66" y="36" width="10" height="10" rx="2" fill="#FF2E4D"/>
+                
+                <rect x="24" y="50" width="10" height="10" rx="2" fill="#182C62"/>
+                <rect x="38" y="50" width="24" height="10" rx="2" fill="#0066FF"/>
+                <rect x="66" y="50" width="10" height="10" rx="2" fill="#182C62"/>
               </svg>
             </div>
 
-            <div class="flex items-center gap-1 text-gold text-xs mb-1">
+            <div class="flex items-center gap-1 text-crimson text-xs mb-1">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star-half-stroke"></i>
-              <span class="text-stone-400 text-[11px] ml-1.5">(112)</span>
+              <span class="text-slate-400 text-[11px] ml-1.5">(94)</span>
             </div>
 
-            <h3 class="font-serif text-stone-100 font-semibold text-lg group-hover:text-gold transition-colors">Oud Imperial Elixir</h3>
-            <p class="text-stone-400 text-xs mt-1 line-clamp-2">Wild Cambodian agarwood steeped with black amber, saffron, and damask rose.</p>
+            <h3 class="font-outfit text-white font-bold text-lg group-hover:text-crimson transition-colors">CyberKeys 65% RedSwitch</h3>
+            <p class="text-slate-400 text-xs mt-1">Hot-swappable magnetic mechanical switches with per-key RGB backlights.</p>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-gold/15 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
             <div>
-              <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Acquisition</span>
-              <span class="font-cinzel text-gold font-bold text-lg">$620</span>
+              <span class="text-slate-500 text-xs line-through">$219</span>
+              <span class="font-outfit text-white font-black text-xl block">$169</span>
             </div>
-            <button onclick="addToCart('Oud Imperial Elixir', 620, 'Fragrance')" class="w-10 h-10 rounded-full bg-gold/10 border border-gold/40 hover:bg-gold hover:text-obsidian-950 text-gold flex items-center justify-center transition-all duration-300">
-              <i class="fa-solid fa-bag-shopping text-sm"></i>
+            <button onclick="addToCart('CyberKeys 65% RedSwitch', 169, 'Peripherals')" class="w-11 h-11 rounded-xl bg-crimson/20 hover:bg-crimson text-crimson-light hover:text-white border border-crimson/40 flex items-center justify-center transition-all duration-300">
+              <i class="fa-solid fa-plus text-sm"></i>
             </button>
           </div>
         </article>
 
-        <!-- Product 3 -->
-        <article class="group rounded-2xl bg-obsidian-850/60 border border-gold/20 p-5 flex flex-col justify-between gold-border-glow transition-all duration-300">
+        <!-- Card 3 -->
+        <article class="group rounded-3xl bg-midnight-900/70 border border-slate-800 p-5 flex flex-col justify-between neon-border-blue transition-all duration-300">
           <div>
-            <div class="relative w-full h-64 rounded-xl bg-obsidian-950 border border-gold/10 flex items-center justify-center p-4 overflow-hidden mb-5">
-              <span class="absolute top-3 left-3 bg-gold text-obsidian-950 text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded">
-                Bespoke Sizing
+            <div class="relative w-full h-64 rounded-2xl bg-midnight-950 border border-slate-800 flex items-center justify-center p-4 overflow-hidden mb-5">
+              <span class="absolute top-3 left-3 bg-midnight-800 border border-electric/40 text-electric-glow text-[10px] font-bold uppercase px-2.5 py-1 rounded-md">
+                1000Hz POLLING
               </span>
-              <button onclick="toggleWishlist(this)" aria-label="Add to wishlist" class="absolute top-3 right-3 text-stone-400 hover:text-gold transition">
-                <i class="fa-regular fa-heart text-base"></i>
+              <button onclick="toggleWishlist(this)" aria-label="Add to wishlist" class="absolute top-3 right-3 text-slate-400 hover:text-crimson transition">
+                <i class="fa-regular fa-heart text-lg"></i>
               </button>
               
-              <!-- SVG Illustration: Signet Ring -->
+              <!-- SVG: Gaming Mouse -->
               <svg class="w-36 h-36 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
-                <!-- Ring Band -->
-                <path d="M25 60 C25 85, 75 85, 75 60 C75 48, 68 38, 50 38 C32 38, 25 48, 25 60 Z" stroke="url(#ringGrad)" stroke-width="8" stroke-linecap="round"/>
-                <!-- Signet Face -->
-                <rect x="36" y="24" width="28" height="20" rx="3" fill="#0E0E0E" stroke="#D4AF37" stroke-width="2.5"/>
-                <!-- Engraved Monogram -->
-                <path d="M44 38 L50 28 L56 38 M46 34 L54 34" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
-                <defs>
-                  <linearGradient id="ringGrad" x1="25" y1="38" x2="75" y2="85">
-                    <stop stop-color="#F5DC92"/>
-                    <stop offset="0.5" stop-color="#D4AF37"/>
-                    <stop offset="1" stop-color="#785310"/>
-                  </linearGradient>
-                </defs>
+                <path d="M36 40 C36 20, 64 20, 64 40 L66 65 C66 80, 34 80, 34 65 Z" fill="#0C1738" stroke="#0066FF" stroke-width="2.5"/>
+                <line x1="50" y1="24" x2="50" y2="46" stroke="#FF2E4D" stroke-width="2"/>
+                <rect x="47" y="32" width="6" height="12" rx="3" fill="#FF2E4D"/>
+                <circle cx="50" cy="62" r="5" stroke="#70B4FF" stroke-width="1.5"/>
               </svg>
             </div>
 
-            <div class="flex items-center gap-1 text-gold text-xs mb-1">
+            <div class="flex items-center gap-1 text-crimson text-xs mb-1">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
-              <span class="text-stone-400 text-[11px] ml-1.5">(29)</span>
+              <span class="text-slate-400 text-[11px] ml-1.5">(318)</span>
             </div>
 
-            <h3 class="font-serif text-stone-100 font-semibold text-lg group-hover:text-gold transition-colors">Obsidian Signet № 7</h3>
-            <p class="text-stone-400 text-xs mt-1 line-clamp-2">Solid 18K yellow gold setting with hand-inlaid polished volcanic obsidian gem.</p>
+            <h3 class="font-outfit text-white font-bold text-lg group-hover:text-electric-glow transition-colors">HyperGlide Wireless 48g</h3>
+            <p class="text-slate-400 text-xs mt-1">Featherlight magnesium honeycomb shell with 32,000 DPI sensor.</p>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-gold/15 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
             <div>
-              <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Acquisition</span>
-              <span class="font-cinzel text-gold font-bold text-lg">$4,450</span>
+              <span class="text-slate-500 text-xs line-through">$139</span>
+              <span class="font-outfit text-white font-black text-xl block">$99</span>
             </div>
-            <button onclick="addToCart('Obsidian Signet № 7', 4450, 'Jewelry')" class="w-10 h-10 rounded-full bg-gold/10 border border-gold/40 hover:bg-gold hover:text-obsidian-950 text-gold flex items-center justify-center transition-all duration-300">
-              <i class="fa-solid fa-bag-shopping text-sm"></i>
+            <button onclick="addToCart('HyperGlide Wireless 48g', 99, 'Peripherals')" class="w-11 h-11 rounded-xl bg-electric/20 hover:bg-electric text-electric-glow hover:text-white border border-electric/40 flex items-center justify-center transition-all duration-300">
+              <i class="fa-solid fa-plus text-sm"></i>
             </button>
           </div>
         </article>
 
-        <!-- Product 4 -->
-        <article class="group rounded-2xl bg-obsidian-850/60 border border-gold/20 p-5 flex flex-col justify-between gold-border-glow transition-all duration-300">
+        <!-- Card 4 -->
+        <article class="group rounded-3xl bg-midnight-900/70 border border-slate-800 p-5 flex flex-col justify-between neon-border-red transition-all duration-300">
           <div>
-            <div class="relative w-full h-64 rounded-xl bg-obsidian-950 border border-gold/10 flex items-center justify-center p-4 overflow-hidden mb-5">
-              <span class="absolute top-3 left-3 bg-obsidian-800 text-gold border border-gold/40 text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded">
-                Master Leather
+            <div class="relative w-full h-64 rounded-2xl bg-midnight-950 border border-slate-800 flex items-center justify-center p-4 overflow-hidden mb-5">
+              <span class="absolute top-3 left-3 bg-crimson text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md shadow-glow-red">
+                LIMITED
               </span>
-              <button onclick="toggleWishlist(this)" aria-label="Add to wishlist" class="absolute top-3 right-3 text-stone-400 hover:text-gold transition">
-                <i class="fa-regular fa-heart text-base"></i>
+              <button onclick="toggleWishlist(this)" aria-label="Add to wishlist" class="absolute top-3 right-3 text-slate-400 hover:text-crimson transition">
+                <i class="fa-regular fa-heart text-lg"></i>
               </button>
               
-              <!-- SVG Illustration: Luxury Weekender Duffle -->
+              <!-- SVG: Smart Audio DAC -->
               <svg class="w-36 h-36 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 100 100" fill="none">
-                <!-- Handles -->
-                <path d="M38 45 C38 25, 62 25, 62 45" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" fill="none"/>
-                <!-- Main Bag Body -->
-                <rect x="18" y="42" width="64" height="38" rx="8" fill="#141414" stroke="#AA771C" stroke-width="2"/>
-                <line x1="18" y1="52" x2="82" y2="52" stroke="#444" stroke-width="1.5"/>
-                <!-- Gold Clasp & Rivets -->
-                <circle cx="50" cy="52" r="3.5" fill="#D4AF37"/>
-                <circle cx="28" cy="46" r="2" fill="#D4AF37"/>
-                <circle cx="72" cy="46" r="2" fill="#D4AF37"/>
+                <rect x="22" y="32" width="56" height="40" rx="8" fill="#0C1738" stroke="#FF2E4D" stroke-width="2.5"/>
+                <circle cx="40" cy="52" r="10" stroke="#0066FF" stroke-width="2"/>
+                <circle cx="40" cy="52" r="4" fill="#FF2E4D"/>
+                <rect x="60" y="44" width="8" height="4" rx="1" fill="#70B4FF"/>
+                <rect x="60" y="54" width="8" height="4" rx="1" fill="#70B4FF"/>
               </svg>
             </div>
 
-            <div class="flex items-center gap-1 text-gold text-xs mb-1">
+            <div class="flex items-center gap-1 text-crimson text-xs mb-1">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
-              <span class="text-stone-400 text-[11px] ml-1.5">(63)</span>
+              <span class="text-slate-400 text-[11px] ml-1.5">(82)</span>
             </div>
 
-            <h3 class="font-serif text-stone-100 font-semibold text-lg group-hover:text-gold transition-colors">Vanguard Weekender 55</h3>
-            <p class="text-stone-400 text-xs mt-1 line-clamp-2">Full-grain French calfskin with heavy gold-plated hardware and suede interior.</p>
+            <h3 class="font-outfit text-white font-bold text-lg group-hover:text-crimson transition-colors">Scarlet Hi-Res DAC Amp</h3>
+            <p class="text-slate-400 text-xs mt-1">32-bit / 768kHz balanced headphone amplifier with studio EQ presets.</p>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-gold/15 flex items-center justify-between">
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
             <div>
-              <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Acquisition</span>
-              <span class="font-cinzel text-gold font-bold text-lg">$3,800</span>
+              <span class="text-slate-500 text-xs line-through">$279</span>
+              <span class="font-outfit text-white font-black text-xl block">$219</span>
             </div>
-            <button onclick="addToCart('Vanguard Weekender 55', 3800, 'Leather')" class="w-10 h-10 rounded-full bg-gold/10 border border-gold/40 hover:bg-gold hover:text-obsidian-950 text-gold flex items-center justify-center transition-all duration-300">
-              <i class="fa-solid fa-bag-shopping text-sm"></i>
+            <button onclick="addToCart('Scarlet Hi-Res DAC Amp', 219, 'Audio')" class="w-11 h-11 rounded-xl bg-crimson/20 hover:bg-crimson text-crimson-light hover:text-white border border-crimson/40 flex items-center justify-center transition-all duration-300">
+              <i class="fa-solid fa-plus text-sm"></i>
             </button>
           </div>
         </article>
@@ -595,94 +599,84 @@
       </div>
     </section>
 
-    <!-- FLAGSHIP SIGNATURE SPOTLIGHT & COUNTDOWN -->
-    <section id="spotlight" class="py-24 bg-gradient-to-b from-obsidian-950 via-obsidian-900 to-obsidian-950 border-y border-gold/20 relative overflow-hidden">
-      <!-- Background Ambient Glow -->
-      <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- PROMOTIONAL FLASH DEAL OF THE DAY -->
+    <section id="deals" class="py-20 bg-gradient-to-r from-midnight-950 via-midnight-900 to-crimson-dark/40 border-y border-crimson/30 relative overflow-hidden">
+      <div class="absolute -left-20 top-0 w-80 h-80 bg-electric/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -right-20 bottom-0 w-80 h-80 bg-crimson/25 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          <!-- Visual Artwork Card -->
-          <div class="lg:col-span-6">
-            <div class="rounded-3xl p-8 bg-obsidian-850/70 border border-gold/30 gold-border-glow relative overflow-hidden text-center">
-              <div class="absolute -right-12 -top-12 w-48 h-48 bg-gold/15 rounded-full blur-2xl"></div>
-              
-              <div class="inline-block py-1 px-4 rounded-full bg-gold/10 border border-gold/40 text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-6">
-                Privé Allocation
-              </div>
-
-              <!-- Big Graphic Showcase -->
-              <div class="h-80 w-full flex items-center justify-center">
-                <svg class="w-72 h-72 drop-shadow-[0_20px_35px_rgba(212,175,55,0.4)]" viewBox="0 0 200 200" fill="none">
-                  <circle cx="100" cy="100" r="85" stroke="url(#spotlightGold)" stroke-width="2"/>
-                  <circle cx="100" cy="100" r="75" fill="#0B0B0B" stroke="#AA771C" stroke-width="2"/>
-                  
-                  <!-- Celestial Moonphase & Gears -->
-                  <path d="M70 100 C70 60, 130 60, 130 100 C130 135, 70 135, 70 100 Z" fill="#151515" stroke="#D4AF37" stroke-width="1.5"/>
-                  <circle cx="92" cy="94" r="8" fill="#F3E5AB"/>
-                  <circle cx="112" cy="98" r="4" fill="#D4AF37"/>
-                  <circle cx="100" cy="100" r="6" fill="#D4AF37"/>
-                  
-                  <!-- Faceted Hands -->
-                  <polygon points="100,100 97,42 100,32 103,42" fill="#FFF0BD"/>
-                  <polygon points="100,100 138,110 148,112 138,116" fill="#D4AF37"/>
-                  
-                  <defs>
-                    <linearGradient id="spotlightGold" x1="0" y1="0" x2="200" y2="200">
-                      <stop stop-color="#FFF0BD"/>
-                      <stop offset="0.5" stop-color="#D4AF37"/>
-                      <stop offset="1" stop-color="#6B4708"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-
-              <div class="mt-4">
-                <h3 class="font-serif text-2xl text-stone-100 font-bold">The Aureus Celestial Opus</h3>
-                <p class="text-stone-400 text-xs mt-1">Single-Piece Grand Complication with Platinum Perpetual Calendar.</p>
-              </div>
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-crimson text-white text-xs font-bold uppercase tracking-widest shadow-glow-red">
+              <i class="fa-solid fa-stopwatch animate-bounce"></i> Deal Of The Day
             </div>
-          </div>
-
-          <!-- Spotlight Details & Live Countdown -->
-          <div class="lg:col-span-6 space-y-6">
-            <span class="text-gold text-xs tracking-[0.3em] uppercase font-bold">Collector Opportunity</span>
-            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-100 leading-tight">
-              Auction Vault Closes In
+            <h2 class="font-outfit text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+              AeroPulse Studio Rig Bundle
             </h2>
-            <p class="text-stone-400 text-sm font-light leading-relaxed">
-              Every leap year, the Aureus Ateliers unveil a singular horological piece forged without compromise. Registered patrons may bid before the private ballot concludes.
+            <p class="text-slate-300 text-sm max-w-lg leading-relaxed">
+              Complete streamer & audio workstation package: Includes Scarlet DAC, XLR Condenser Mic, and Nova-Pro Headphones. Save over $180 today only.
             </p>
 
             <!-- LIVE COUNTDOWN TIMER -->
-            <div class="grid grid-cols-4 gap-3 py-4 max-w-md">
-              <div class="p-3.5 rounded-xl bg-obsidian-800 border border-gold/25 text-center">
-                <span id="days" class="font-cinzel text-2xl sm:text-3xl font-bold text-gold block">03</span>
-                <span class="text-[9px] uppercase tracking-widest text-stone-400">Days</span>
+            <div class="grid grid-cols-4 gap-3 max-w-sm">
+              <div class="p-3 rounded-2xl bg-midnight-950 border border-electric/30 text-center">
+                <span id="days" class="font-outfit text-2xl sm:text-3xl font-extrabold text-white block">01</span>
+                <span class="text-[9px] uppercase tracking-widest text-slate-400">Days</span>
               </div>
-              <div class="p-3.5 rounded-xl bg-obsidian-800 border border-gold/25 text-center">
-                <span id="hours" class="font-cinzel text-2xl sm:text-3xl font-bold text-gold block">18</span>
-                <span class="text-[9px] uppercase tracking-widest text-stone-400">Hours</span>
+              <div class="p-3 rounded-2xl bg-midnight-950 border border-electric/30 text-center">
+                <span id="hours" class="font-outfit text-2xl sm:text-3xl font-extrabold text-white block">14</span>
+                <span class="text-[9px] uppercase tracking-widest text-slate-400">Hours</span>
               </div>
-              <div class="p-3.5 rounded-xl bg-obsidian-800 border border-gold/25 text-center">
-                <span id="minutes" class="font-cinzel text-2xl sm:text-3xl font-bold text-gold block">42</span>
-                <span class="text-[9px] uppercase tracking-widest text-stone-400">Mins</span>
+              <div class="p-3 rounded-2xl bg-midnight-950 border border-crimson/30 text-center">
+                <span id="minutes" class="font-outfit text-2xl sm:text-3xl font-extrabold text-crimson block">28</span>
+                <span class="text-[9px] uppercase tracking-widest text-slate-400">Mins</span>
               </div>
-              <div class="p-3.5 rounded-xl bg-obsidian-800 border border-gold/25 text-center">
-                <span id="seconds" class="font-cinzel text-2xl sm:text-3xl font-bold text-gold block">10</span>
-                <span class="text-[9px] uppercase tracking-widest text-stone-400">Secs</span>
+              <div class="p-3 rounded-2xl bg-midnight-950 border border-crimson/30 text-center">
+                <span id="seconds" class="font-outfit text-2xl sm:text-3xl font-extrabold text-crimson block">54</span>
+                <span class="text-[9px] uppercase tracking-widest text-slate-400">Secs</span>
               </div>
             </div>
 
-            <!-- Spotlight CTA -->
-            <div class="flex flex-col sm:flex-row items-center gap-4 pt-3">
-              <button onclick="addToCart('Aureus Celestial Opus', 115000, 'Masterwork')" class="w-full sm:w-auto px-8 py-4 rounded-full gold-gradient-bg gold-gradient-bg-hover text-obsidian-950 font-bold text-xs uppercase tracking-[0.2em] shadow-gold-md hover:shadow-gold-lg transition-all duration-300">
-                Register Sealed Bid ($115,000)
+            <div class="flex items-baseline gap-4 pt-2">
+              <span class="font-outfit text-4xl font-black text-white">$399</span>
+              <span class="text-slate-400 line-through text-lg">$580</span>
+              <span class="text-crimson font-bold text-sm bg-crimson/20 border border-crimson/40 px-3 py-1 rounded-full">Save 31%</span>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row gap-4">
+              <button onclick="addToCart('AeroPulse Studio Rig Bundle', 399, 'Bundle')" class="px-8 py-4 rounded-xl red-gradient-bg text-white font-bold text-xs uppercase tracking-widest shadow-glow-red hover:scale-[1.02] transition-all">
+                Claim Bundle Offer Now
               </button>
-              <button onclick="showToast('Dossier dispatched to your encrypted concierge.')" class="w-full sm:w-auto px-6 py-4 rounded-full border border-gold/40 text-stone-300 hover:text-gold hover:border-gold text-xs uppercase tracking-widest font-medium transition">
-                Request Provenance Dossier
+              <button onclick="showToast('Bundle tech sheet sent to download.')" class="px-6 py-4 rounded-xl border border-slate-700 bg-midnight-950/70 hover:border-electric text-slate-200 text-xs uppercase tracking-wider font-semibold transition">
+                View Specs Sheet
               </button>
+            </div>
+          </div>
+
+          <!-- Deal Image Showcase -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md p-8 rounded-3xl bg-midnight-950/90 border border-slate-800 shadow-glow-combo text-center">
+              <div class="h-64 flex items-center justify-center">
+                <!-- SVG Bundle Illustration -->
+                <svg class="w-60 h-60 drop-shadow-[0_15px_30px_rgba(0,102,255,0.4)]" viewBox="0 0 120 120" fill="none">
+                  <!-- Mic Stand -->
+                  <circle cx="60" cy="100" r="18" stroke="#0066FF" stroke-width="3"/>
+                  <line x1="60" y1="100" x2="60" y2="40" stroke="#FF2E4D" stroke-width="4"/>
+                  <!-- Mic Capsule -->
+                  <rect x="50" y="20" width="20" height="35" rx="10" fill="#0C1738" stroke="#0066FF" stroke-width="2"/>
+                  <line x1="53" y1="30" x2="67" y2="30" stroke="#FF2E4D" stroke-width="1.5"/>
+                  <line x1="53" y1="35" x2="67" y2="35" stroke="#FF2E4D" stroke-width="1.5"/>
+                  <line x1="53" y1="40" x2="67" y2="40" stroke="#FF2E4D" stroke-width="1.5"/>
+                  
+                  <!-- Sound wave arcs -->
+                  <path d="M36 30 C30 38, 30 46, 36 54" stroke="#70B4FF" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M84 30 C90 38, 90 46, 84 54" stroke="#FF2E4D" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="inline-block px-3 py-1 rounded-full bg-electric/20 border border-electric/40 text-electric-glow text-xs font-bold uppercase tracking-wider">
+                Only 14 Bundles Left In Stock
+              </span>
             </div>
           </div>
 
@@ -690,196 +684,177 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS & PRESS -->
-    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-xl mx-auto mb-14">
-        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold">Critical Acclaim</span>
-        <h2 class="font-serif text-3xl font-bold text-stone-100 mt-2">Echoes of Distinction</h2>
-      </div>
+    <!-- NEWSLETTER SECTION -->
+    <section id="newsletter" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-b from-midnight-900 to-midnight-950 border border-slate-800 p-8 sm:p-14 text-center relative overflow-hidden">
+        <div class="max-w-2xl mx-auto space-y-6 relative z-10">
+          <div class="w-12 h-12 mx-auto rounded-2xl bg-crimson/20 border border-crimson/40 flex items-center justify-center">
+            <i class="fa-solid fa-envelope-open-text text-crimson text-xl"></i>
+          </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="p-8 rounded-2xl bg-obsidian-850/50 border border-gold/15 relative flex flex-col justify-between">
-          <div>
-            <div class="text-gold text-2xl font-serif mb-4">“</div>
-            <p class="text-stone-300 text-sm font-light leading-relaxed italic">
-              Aureus exemplifies the pinnacle of modern micro-engineering married to classical sovereign aesthetics. A tour de force for collectors.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-gold/10 flex items-center justify-between">
-            <span class="font-cinzel text-gold text-xs tracking-widest font-bold">VOGUE INTERNATIONAL</span>
-            <span class="text-[10px] text-stone-400">Geneva Edition</span>
-          </div>
+          <h2 class="font-outfit text-3xl sm:text-4xl font-extrabold text-white">Unlock VIP Cyber Drop Alerts</h2>
+          <p class="text-slate-300 text-sm">
+            Subscribe to receive confidential drop notifications, member discounts, and invitations to beta hardware trials.
+          </p>
+
+          <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input 
+              type="email" 
+              required 
+              placeholder="Enter your personal email..." 
+              class="flex-1 bg-midnight-950 border border-slate-700 rounded-xl px-5 py-3.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-electric"
+            >
+            <button 
+              type="submit" 
+              class="px-7 py-3.5 rounded-xl red-gradient-bg text-white font-bold text-xs uppercase tracking-widest shadow-glow-red hover:opacity-95 transition"
+            >
+              Get $20 Off
+            </button>
+          </form>
+          <span class="text-[11px] text-slate-500 block">Instant $20 voucher code sent immediately after signup.</span>
         </div>
-
-        <div class="p-8 rounded-2xl bg-obsidian-850/50 border border-gold/15 relative flex flex-col justify-between">
-          <div>
-            <div class="text-gold text-2xl font-serif mb-4">“</div>
-            <p class="text-stone-300 text-sm font-light leading-relaxed italic">
-              The level of craftsmanship in their obsidian and solid gold pairings matches what one typically finds only at top-tier Swiss auction houses.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-gold/10 flex items-center justify-between">
-            <span class="font-cinzel text-gold text-xs tracking-widest font-bold">FORBES LUXURY</span>
-            <span class="text-[10px] text-stone-400">Curator Review</span>
-          </div>
-        </div>
-
-        <div class="p-8 rounded-2xl bg-obsidian-850/50 border border-gold/15 relative flex flex-col justify-between">
-          <div>
-            <div class="text-gold text-2xl font-serif mb-4">“</div>
-            <p class="text-stone-300 text-sm font-light leading-relaxed italic">
-              Their direct-to-collector concierge model guarantees that rare releases bypass speculation and land directly with genuine horology patrons.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-gold/10 flex items-center justify-between">
-            <span class="font-cinzel text-gold text-xs tracking-widest font-bold">ROBB REPORT</span>
-            <span class="text-[10px] text-stone-400">Annual Horology Guide</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- VIP SALON NEWSLETTER SUBSCRIPTION -->
-    <section id="vip" class="py-20 border-t border-gold/15 bg-obsidian-950 relative">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <div class="w-12 h-12 mx-auto rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center">
-          <i class="fa-solid fa-crown text-gold text-lg"></i>
-        </div>
-
-        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-bold">Enter The Aureus Salon</h2>
-        <p class="text-stone-400 text-sm max-w-xl mx-auto font-light leading-relaxed">
-          Receive confidential allocations, invitations to private Basel salons, and priority notice ahead of public archive releases.
-        </p>
-
-        <form onsubmit="handleSubscribe(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 pt-2">
-          <input 
-            type="email" 
-            required 
-            placeholder="Enter your private email..." 
-            class="flex-1 bg-obsidian-850 border border-gold/30 rounded-full px-5 py-3.5 text-xs text-stone-100 placeholder-stone-500 focus:outline-none focus:border-gold transition-colors"
-          >
-          <button 
-            type="submit" 
-            class="px-7 py-3.5 rounded-full gold-gradient-bg gold-gradient-bg-hover text-obsidian-950 font-bold text-xs uppercase tracking-widest transition duration-300 shadow-gold-sm"
-          >
-            Join Salon
-          </button>
-        </form>
-        <span class="text-[10px] uppercase tracking-wider text-stone-500 block">Strict Confidentiality Assured &bull; Zero Spam</span>
       </div>
     </section>
   </main>
 
-  <!-- LUXURY FOOTER -->
-  <footer class="bg-obsidian-950 border-t border-gold/20 pt-16 pb-10 text-stone-400 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-gold/10">
+  <!-- FOOTER -->
+  <footer class="bg-midnight-950 border-t border-slate-800 pt-16 pb-10 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
       
-      <!-- Brand Bio -->
+      <!-- Brand Details -->
       <div class="lg:col-span-2 space-y-4">
-        <span class="font-cinzel text-2xl font-bold tracking-[0.25em] gold-gradient-text">AUREUS</span>
-        <p class="text-stone-400 text-xs font-light max-w-sm leading-relaxed">
-          Maison of fine horology, bespoke signet jewelry, and artisanal perfumes. Operating between Zurich, London, and Tokyo.
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-electric to-crimson flex items-center justify-center font-outfit font-black text-white text-base">
+            NX
+          </div>
+          <span class="font-outfit text-xl font-black text-white tracking-wider">NEXUS GEAR</span>
+        </div>
+        <p class="text-slate-400 text-xs max-w-sm leading-relaxed">
+          High-performance audio peripherals and cyber-engineered gear designed for producers, pro gamers, and audiophiles.
         </p>
-        <div class="flex items-center space-x-4 pt-2">
-          <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-stone-400 hover:text-gold hover:border-gold transition"><i class="fa-brands fa-instagram text-xs"></i></a>
-          <a href="#" aria-label="X / Twitter" class="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-stone-400 hover:text-gold hover:border-gold transition"><i class="fa-brands fa-x-twitter text-xs"></i></a>
-          <a href="#" aria-label="LinkedIn" class="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-stone-400 hover:text-gold hover:border-gold transition"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
-          <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-stone-400 hover:text-gold hover:border-gold transition"><i class="fa-brands fa-youtube text-xs"></i></a>
+        <div class="flex items-center space-x-3 pt-2">
+          <a href="#" aria-label="Discord" class="w-8 h-8 rounded-lg bg-midnight-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-electric-glow hover:border-electric transition"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" aria-label="Twitter" class="w-8 h-8 rounded-lg bg-midnight-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-crimson hover:border-crimson transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-lg bg-midnight-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-crimson hover:border-crimson transition"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-lg bg-midnight-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-electric-glow hover:border-electric transition"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
 
-      <!-- Categories -->
+      <!-- Links 1 -->
       <div class="space-y-3">
-        <h5 class="text-stone-200 uppercase tracking-widest font-semibold text-xs">Collections</h5>
+        <h5 class="text-white uppercase tracking-wider font-bold text-xs">Categories</h5>
         <ul class="space-y-2">
-          <li><a href="#" class="hover:text-gold transition">Tourbillon Watches</a></li>
-          <li><a href="#" class="hover:text-gold transition">Solid Gold Signets</a></li>
-          <li><a href="#" class="hover:text-gold transition">Oud & Flacons</a></li>
-          <li><a href="#" class="hover:text-gold transition">Collector Leather</a></li>
-          <li><a href="#" class="hover:text-gold transition">Private Vault Archive</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Wireless ANC Audio</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Hall Effect Keyboards</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Studio Microphones</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Low-Latency Mice</a></li>
+          <li><a href="#" class="hover:text-crimson transition">Refurbished Outlet</a></li>
         </ul>
       </div>
 
-      <!-- Concierge & Care -->
+      <!-- Links 2 -->
       <div class="space-y-3">
-        <h5 class="text-stone-200 uppercase tracking-widest font-semibold text-xs">Concierge</h5>
+        <h5 class="text-white uppercase tracking-wider font-bold text-xs">Support & Help</h5>
         <ul class="space-y-2">
-          <li><a href="#" class="hover:text-gold transition">Private Appointment</a></li>
-          <li><a href="#" class="hover:text-gold transition">Authentication Ledger</a></li>
-          <li><a href="#" class="hover:text-gold transition">Restoration Atelier</a></li>
-          <li><a href="#" class="hover:text-gold transition">Armored Logistics</a></li>
-          <li><a href="#" class="hover:text-gold transition">Client Relations</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Order Tracking</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Firmware & Drivers</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Warranty Claims</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Returns Portal</a></li>
+          <li><a href="#" class="hover:text-electric-glow transition">Contact Tech Lab</a></li>
         </ul>
       </div>
 
-      <!-- Legal & Salon -->
+      <!-- Links 3 -->
       <div class="space-y-3">
-        <h5 class="text-stone-200 uppercase tracking-widest font-semibold text-xs">Legal & Heritage</h5>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-gold transition">Responsible Sourcing</a></li>
-          <li><a href="#" class="hover:text-gold transition">Geneva Seal Standards</a></li>
-          <li><a href="#" class="hover:text-gold transition">Privacy & Discretion</a></li>
-          <li><a href="#" class="hover:text-gold transition">Terms of Consignment</a></li>
-        </ul>
+        <h5 class="text-white uppercase tracking-wider font-bold text-xs">Payment & Security</h5>
+        <div class="flex flex-wrap gap-2 pt-1 text-slate-300">
+          <span class="px-2.5 py-1 rounded bg-midnight-900 border border-slate-800 text-[11px]"><i class="fa-brands fa-cc-visa text-blue-400"></i> Visa</span>
+          <span class="px-2.5 py-1 rounded bg-midnight-900 border border-slate-800 text-[11px]"><i class="fa-brands fa-cc-mastercard text-red-400"></i> MC</span>
+          <span class="px-2.5 py-1 rounded bg-midnight-900 border border-slate-800 text-[11px]"><i class="fa-brands fa-apple-pay text-white"></i> Apple</span>
+          <span class="px-2.5 py-1 rounded bg-midnight-900 border border-slate-800 text-[11px]"><i class="fa-brands fa-google-pay text-blue-300"></i> G-Pay</span>
+        </div>
+        <p class="text-[11px] text-slate-500 pt-2 leading-relaxed">
+          All transactions are processed through 256-bit SSL encrypted channels.
+        </p>
       </div>
 
     </div>
 
-    <!-- Copyright -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-4">
-      <div>&copy; 2026 AUREUS HAUTE HORLOGERIE & OBJETS. ALL RIGHTS RESERVED.</div>
+    <!-- Sub-footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+      <div>&copy; 2026 NEXUS AUDIO & CYBER PERIPHERALS CORP. ALL RIGHTS RESERVED.</div>
       <div class="flex space-x-6">
-        <a href="#" class="hover:text-gold transition">Terms of Sale</a>
-        <a href="#" class="hover:text-gold transition">Discretion Charter</a>
-        <a href="#" class="hover:text-gold transition">Security Protocol</a>
+        <a href="#" class="hover:text-slate-300 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-300 transition">Terms of Service</a>
+        <a href="#" class="hover:text-slate-300 transition">Cookie Preferences</a>
       </div>
     </div>
   </footer>
 
-  <!-- INTERACTIVE CART DRAWER (SLIDE OVER) -->
+  <!-- SHOPPING CART SLIDE-OUT DRAWER -->
   <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-all duration-300 opacity-0">
-    <!-- Backdrop Overlay -->
-    <div id="cartBackdrop" class="absolute inset-0 bg-black/75 backdrop-blur-sm transition-opacity opacity-0"></div>
+    <div id="cartBackdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity opacity-0"></div>
 
     <div class="absolute inset-y-0 right-0 max-w-full flex pl-10 pointer-events-auto">
-      <div id="cartPanel" class="w-screen max-w-md bg-obsidian-950 border-l border-gold/30 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300">
+      <div id="cartPanel" class="w-screen max-w-md bg-midnight-950 border-l border-slate-800 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300">
         
         <!-- Cart Header -->
-        <div class="p-6 border-b border-gold/15 flex items-center justify-between bg-obsidian-900">
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-bag-shopping text-gold text-lg"></i>
-            <h3 class="font-serif text-lg font-bold text-stone-100">Private Cart Bag</h3>
+        <div class="p-6 border-b border-slate-800 flex items-center justify-between bg-midnight-900">
+          <div class="flex items-center gap-2.5">
+            <i class="fa-solid fa-cart-shopping text-crimson text-lg"></i>
+            <h3 class="font-outfit text-lg font-bold text-white">Your Cart (<span id="cartDrawerCount">1</span>)</h3>
           </div>
-          <button id="closeCartBtn" aria-label="Close Shopping Bag" class="text-stone-400 hover:text-gold text-lg transition p-1">
+          <button id="closeCartBtn" aria-label="Close Shopping Bag" class="text-slate-400 hover:text-white text-lg p-1">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
 
-        <!-- Cart Items List Container -->
+        <!-- Items Container -->
         <div id="cartItemList" class="flex-1 overflow-y-auto p-6 space-y-4">
-          <!-- Dynamic Items Injected Here -->
+          <!-- Dynamic Items injected here -->
         </div>
 
-        <!-- Cart Total & Checkout -->
-        <div class="p-6 border-t border-gold/20 bg-obsidian-900 space-y-4">
-          <div class="flex items-center justify-between text-xs tracking-wider uppercase text-stone-400">
-            <span>Complimentary Insured Shipping</span>
-            <span class="text-gold font-semibold">Included</span>
+        <!-- Cart Summary & Actions -->
+        <div class="p-6 border-t border-slate-800 bg-midnight-900/90 space-y-4">
+          <!-- Promo Code Input -->
+          <div class="flex gap-2">
+            <input 
+              id="promoCodeInput"
+              type="text" 
+              placeholder="Promo Code (Try: REDNBLUE)" 
+              class="flex-1 bg-midnight-950 border border-slate-700 rounded-xl px-4 py-2 text-xs text-white uppercase outline-none focus:border-electric"
+            >
+            <button onclick="applyPromo()" class="px-4 py-2 rounded-xl bg-electric text-white font-bold text-xs uppercase hover:bg-electric-hover transition">
+              Apply
+            </button>
           </div>
 
-          <div class="flex items-center justify-between text-sm pt-2 border-t border-gold/10">
-            <span class="font-serif text-stone-200">Subtotal Estimation</span>
-            <span id="cartSubtotal" class="font-cinzel text-xl font-bold text-gold">$24,800</span>
+          <div class="space-y-1.5 text-xs text-slate-400">
+            <div class="flex items-center justify-between">
+              <span>Subtotal</span>
+              <span id="cartSubtotal" class="font-outfit font-bold text-white text-sm">$249</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>Standard Shipping</span>
+              <span class="text-electric-glow font-semibold">FREE</span>
+            </div>
+            <div id="discountRow" class="hidden flex items-center justify-between text-crimson font-bold">
+              <span>Promo Discount (20%)</span>
+              <span id="discountAmount">-$0.00</span>
+            </div>
           </div>
 
-          <button onclick="handleCheckout()" class="w-full py-4 rounded-full gold-gradient-bg gold-gradient-bg-hover text-obsidian-950 font-bold text-xs uppercase tracking-[0.2em] shadow-gold-md transition duration-300">
-            Proceed to Secure Escrow
+          <div class="flex items-center justify-between text-sm pt-3 border-t border-slate-800">
+            <span class="font-outfit text-white font-bold text-base">Estimated Total</span>
+            <span id="cartTotal" class="font-outfit font-extrabold text-2xl text-crimson">$249</span>
+          </div>
+
+          <button onclick="handleCheckout()" class="w-full py-4 rounded-xl red-gradient-bg text-white font-bold text-xs uppercase tracking-widest shadow-glow-red hover:opacity-95 transition">
+            Proceed to Secure Checkout
           </button>
 
-          <p class="text-center text-[10px] text-stone-500 uppercase tracking-widest flex items-center justify-center gap-2">
-            <i class="fa-solid fa-lock text-gold"></i> Encrypted 256-Bit Acquisition Pipeline
+          <p class="text-center text-[10px] text-slate-500 flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-lock text-slate-400"></i> Encrypted 256-Bit SSL Secured Terminal
           </p>
         </div>
 
@@ -887,24 +862,25 @@
     </div>
   </div>
 
-  <!-- TOAST NOTIFICATION CONTAINER -->
+  <!-- FLOATING TOAST NOTIFICATION -->
   <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="bg-obsidian-850 border border-gold/60 shadow-gold-md text-stone-100 px-5 py-3.5 rounded-xl flex items-center gap-3">
-      <i class="fa-solid fa-circle-check text-gold text-lg"></i>
+    <div class="bg-midnight-900 border border-electric/60 shadow-glow-blue text-white px-5 py-3.5 rounded-2xl flex items-center gap-3">
+      <i class="fa-solid fa-circle-check text-electric-glow text-lg"></i>
       <div>
-        <h6 id="toastTitle" class="font-serif text-xs font-semibold text-gold">Item Added</h6>
-        <p id="toastMessage" class="text-[11px] text-stone-300">The piece has been reserved in your bag.</p>
+        <h6 id="toastTitle" class="font-outfit text-xs font-bold text-electric-glow">Item Added</h6>
+        <p id="toastMessage" class="text-[11px] text-slate-300">Added to your shopping cart.</p>
       </div>
     </div>
   </div>
 
-  <!-- INTERACTIVE FUNCTIONALITY SCRIPT -->
+  <!-- APPLICATION LOGIC -->
   <script>
-    // State
+    // Shopping Cart State
     let cart = [
-      { id: 1, name: "Chrono Royal 41mm", price: 24800, category: "Watch", qty: 1 }
+      { id: 1, name: "Nexus Nova-Pro ANC", price: 249, category: "Audio", qty: 1 }
     ];
-    let wishlistCount = 2;
+    let wishlistCount = 3;
+    let promoDiscountPercent = 0;
 
     // Elements
     const cartBtn = document.getElementById('cartBtn');
@@ -914,7 +890,11 @@
     const cartPanel = document.getElementById('cartPanel');
     const cartItemList = document.getElementById('cartItemList');
     const cartCountEl = document.getElementById('cartCount');
+    const cartDrawerCountEl = document.getElementById('cartDrawerCount');
     const cartSubtotalEl = document.getElementById('cartSubtotal');
+    const cartTotalEl = document.getElementById('cartTotal');
+    const discountRow = document.getElementById('discountRow');
+    const discountAmountEl = document.getElementById('discountAmount');
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -923,7 +903,7 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Drawer Visibility Handlers
+    // Drawer Visibility
     function openCart() {
       cartDrawer.classList.remove('pointer-events-none', 'opacity-0');
       cartDrawer.classList.add('opacity-100');
@@ -949,7 +929,7 @@
     closeCartBtn.addEventListener('click', closeCart);
     cartBackdrop.addEventListener('click', closeCart);
 
-    // Add Item to Cart
+    // Cart Actions
     function addToCart(name, price, category) {
       const existing = cart.find(item => item.name === name);
       if (existing) {
@@ -958,18 +938,16 @@
         cart.push({ id: Date.now(), name, price, category, qty: 1 });
       }
       updateCartTotals();
-      showToast(`Reserved ${name} in your private bag.`);
+      showToast(`${name} added to cart.`);
       openCart();
     }
 
-    // Remove Item from Cart
     function removeFromCart(id) {
       cart = cart.filter(item => item.id !== id);
       renderCart();
       updateCartTotals();
     }
 
-    // Change Item Quantity
     function changeQty(id, delta) {
       const item = cart.find(i => i.id === id);
       if (item) {
@@ -983,41 +961,67 @@
       }
     }
 
-    // Update Totals
+    function applyPromo() {
+      const input = document.getElementById('promoCodeInput');
+      const val = input.value.trim().toUpperCase();
+      if (val === 'REDNBLUE') {
+        promoDiscountPercent = 0.20;
+        showToast("Code REDNBLUE applied! 20% discount granted.", "Discount Applied");
+      } else if (val === '') {
+        promoDiscountPercent = 0;
+      } else {
+        showToast("Invalid promo coupon code.", "Coupon Error");
+        promoDiscountPercent = 0;
+      }
+      updateCartTotals();
+    }
+
     function updateCartTotals() {
       const totalCount = cart.reduce((acc, curr) => acc + curr.qty, 0);
       const subtotal = cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
+      
       cartCountEl.textContent = totalCount;
+      cartDrawerCountEl.textContent = totalCount;
       cartSubtotalEl.textContent = `$${subtotal.toLocaleString()}`;
+
+      if (promoDiscountPercent > 0) {
+        const discountVal = subtotal * promoDiscountPercent;
+        const finalTotal = subtotal - discountVal;
+        discountRow.classList.remove('hidden');
+        discountAmountEl.textContent = `-$${discountVal.toFixed(2)}`;
+        cartTotalEl.textContent = `$${finalTotal.toFixed(2)}`;
+      } else {
+        discountRow.classList.add('hidden');
+        cartTotalEl.textContent = `$${subtotal.toLocaleString()}`;
+      }
     }
 
-    // Render Cart HTML
     function renderCart() {
       if (cart.length === 0) {
         cartItemList.innerHTML = `
-          <div class="h-64 flex flex-col items-center justify-center text-center space-y-3 text-stone-500">
-            <i class="fa-solid fa-box-open text-3xl text-gold/30"></i>
-            <p class="text-sm">Your private archive bag is empty.</p>
-            <a href="#products" onclick="closeCart()" class="text-xs uppercase tracking-wider text-gold hover:underline">Explore Pieces</a>
+          <div class="h-64 flex flex-col items-center justify-center text-center space-y-3 text-slate-500">
+            <i class="fa-solid fa-cart-arrow-down text-4xl text-slate-700"></i>
+            <p class="text-sm">Your shopping bag is currently empty.</p>
+            <a href="#featured" onclick="closeCart()" class="text-xs uppercase tracking-wider text-crimson font-bold hover:underline">Explore Gear</a>
           </div>
         `;
         return;
       }
 
       cartItemList.innerHTML = cart.map(item => `
-        <div class="p-4 rounded-xl bg-obsidian-850 border border-gold/15 flex items-center justify-between gap-3">
+        <div class="p-4 rounded-2xl bg-midnight-900 border border-slate-800 flex items-center justify-between gap-3">
           <div class="space-y-1">
-            <span class="text-[9px] uppercase tracking-widest text-gold block">${item.category}</span>
-            <h4 class="font-serif text-sm font-semibold text-stone-200">${item.name}</h4>
-            <div class="text-xs text-stone-400 font-cinzel font-medium">$${item.price.toLocaleString()}</div>
+            <span class="text-[9px] uppercase tracking-wider text-electric-glow font-bold block">${item.category}</span>
+            <h4 class="font-outfit text-sm font-bold text-white">${item.name}</h4>
+            <div class="text-xs text-crimson font-bold">$${item.price.toLocaleString()}</div>
           </div>
           <div class="flex items-center gap-2">
-            <div class="flex items-center border border-gold/20 rounded-lg overflow-hidden bg-obsidian-950">
-              <button onclick="changeQty(${item.id}, -1)" class="px-2.5 py-1 text-stone-400 hover:text-gold transition text-xs">-</button>
-              <span class="px-2 py-1 text-xs text-stone-200 font-mono">${item.qty}</span>
-              <button onclick="changeQty(${item.id}, 1)" class="px-2.5 py-1 text-stone-400 hover:text-gold transition text-xs">+</button>
+            <div class="flex items-center border border-slate-700 rounded-lg overflow-hidden bg-midnight-950">
+              <button onclick="changeQty(${item.id}, -1)" class="px-2.5 py-1 text-slate-400 hover:text-white transition text-xs">-</button>
+              <span class="px-2 py-1 text-xs text-white font-mono">${item.qty}</span>
+              <button onclick="changeQty(${item.id}, 1)" class="px-2.5 py-1 text-slate-400 hover:text-white transition text-xs">+</button>
             </div>
-            <button onclick="removeFromCart(${item.id})" class="text-stone-500 hover:text-red-400 transition p-1.5" title="Remove">
+            <button onclick="removeFromCart(${item.id})" class="text-slate-500 hover:text-crimson transition p-1.5" title="Remove">
               <i class="fa-regular fa-trash-can text-xs"></i>
             </button>
           </div>
@@ -1025,8 +1029,8 @@
       `).join('');
     }
 
-    // Interactive Toast Notification
-    function showToast(message, title = "Private Bag Updated") {
+    // Toast Notification
+    function showToast(message, title = "Cart Updated") {
       const toast = document.getElementById('toastNotification');
       document.getElementById('toastTitle').textContent = title;
       document.getElementById('toastMessage').textContent = message;
@@ -1040,16 +1044,16 @@
       }, 3500);
     }
 
-    // Interactive Wishlist Toggle
+    // Wishlist Toggle
     function toggleWishlist(btn) {
       const icon = btn.querySelector('i');
       if (icon.classList.contains('fa-regular')) {
         icon.classList.remove('fa-regular');
-        icon.classList.add('fa-solid', 'text-gold');
+        icon.classList.add('fa-solid', 'text-crimson');
         wishlistCount++;
-        showToast("Piece preserved in your private wishlist.");
+        showToast("Product saved to your wishlist.");
       } else {
-        icon.classList.remove('fa-solid', 'text-gold');
+        icon.classList.remove('fa-solid', 'text-crimson');
         icon.classList.add('fa-regular');
         wishlistCount = Math.max(0, wishlistCount - 1);
         showToast("Removed from wishlist.");
@@ -1057,21 +1061,21 @@
       document.getElementById('wishlistCount').textContent = wishlistCount;
     }
 
-    // VIP Form Submission
+    // Subscription
     function handleSubscribe(e) {
       e.preventDefault();
       const input = e.target.querySelector('input');
-      showToast(`Invitation dispatched to ${input.value}`, "VIP Salon Admittance");
+      showToast(`Discount coupon sent to ${input.value}`, "Welcome to the VIP Club");
       input.value = '';
     }
 
-    // Checkout Action
+    // Checkout
     function handleCheckout() {
       if (cart.length === 0) {
-        showToast("Please add a collector item before checkout.", "Empty Bag");
+        showToast("Your cart is empty.", "Checkout Error");
         return;
       }
-      showToast("Redirecting to secured Swiss escrow terminal...", "Secured Protocol");
+      showToast("Redirecting to 256-Bit SSL payment gateway...", "Secure Processing");
       setTimeout(() => {
         closeCart();
       }, 2000);
@@ -1079,10 +1083,9 @@
 
     // Countdown Timer Logic
     function updateCountdown() {
-      const daysEl = document.getElementById('days');
-      const hoursEl = document.getElementById('hours');
-      const minutesEl = document.getElementById('minutes');
       const secondsEl = document.getElementById('seconds');
+      const minutesEl = document.getElementById('minutes');
+      const hoursEl = document.getElementById('hours');
 
       let s = parseInt(secondsEl.textContent);
       let m = parseInt(minutesEl.textContent);
